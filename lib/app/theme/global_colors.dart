@@ -1,7 +1,8 @@
 import 'package:hexcolor/hexcolor.dart';
 
 HexColor deemYellow = HexColor('#EAAA00');
-HexColor coolorange = HexColor('#FA2108');
-HexColor willoGrove = HexColor('#5F705A');
+HexColor red = HexColor('#C00000');
+HexColor lightGray = HexColor('#CDCDCD');
+HexColor blue = HexColor('#4A7CFF');
 HexColor black = HexColor('#000000');
 HexColor white = HexColor('#FFFFFF');
