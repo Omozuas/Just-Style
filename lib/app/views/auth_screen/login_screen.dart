@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:juststyle/app/common/app_style.dart';
 import 'package:juststyle/app/common/button_large.dart';
 import 'package:juststyle/app/common/custom_textfield.dart';
 import 'package:juststyle/app/theme/global_colors.dart';
+import 'package:juststyle/app/views/auth_screen/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -109,7 +111,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       SizedBox(width: 7.w),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Get.offAll(() => SignupScreen());
+                        },
                         child: Text(
                           'Sign Up',
                           textAlign: TextAlign.center,
