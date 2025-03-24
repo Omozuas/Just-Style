@@ -5,6 +5,7 @@ import 'package:juststyle/app/common/app_style.dart';
 import 'package:juststyle/app/common/button_large.dart';
 import 'package:juststyle/app/common/custom_textfield.dart';
 import 'package:juststyle/app/theme/global_colors.dart';
+import 'package:juststyle/app/views/auth_screen/forgot_passord_screen.dart';
 import 'package:juststyle/app/views/auth_screen/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -89,7 +90,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       GestureDetector(
-                        onTap: () {},
+                        onTap:
+                            () => Get.to(
+                              () => ForgotPassordScreen(),
+                              transition: Transition.cupertino,
+                            ),
                         child: Text(
                           'Forgot Password ?',
                           textAlign: TextAlign.end,

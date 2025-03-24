@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BottomNavigation extends StatelessWidget {
-  const BottomNavigation({super.key});
+class BottomNavigationScreen extends StatelessWidget {
+  const BottomNavigationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
