@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:juststyle/app/theme/global_colors.dart';
+import 'package:juststyle/app/views/bottom_nav/client_bottom_navigation.dart';
 import 'package:juststyle/app/views/welcome_screen/welcom_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -32,4 +33,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-Widget mainHome = WelcomScreen();
+Widget mainHome = ClientBottomNavigationScreen();
