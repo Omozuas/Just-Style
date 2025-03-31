@@ -4,6 +4,8 @@ import 'package:juststyle/app/common/about_header.dart';
 import 'package:juststyle/app/common/custom_search_field.dart';
 import 'package:juststyle/app/common/search_button.dart';
 import 'package:juststyle/app/views/client/home_client_screen/widgets/custom_banner.dart';
+import 'package:juststyle/app/views/client/home_client_screen/widgets/list_of_popular_stylist.dart';
+import 'package:juststyle/app/views/client/home_client_screen/widgets/popular_list_braids.dart';
 import 'package:juststyle/app/views/client/home_client_screen/widgets/user_header.dart';
 
 class HomeClientScreen extends StatelessWidget {
@@ -49,7 +51,16 @@ class HomeClientScreen extends StatelessWidget {
                   onTap: () {},
                   showSeeAll: true,
                 ),
-                SizedBox(height: 25.h),
+                SizedBox(height: 10.h),
+                ListOfPopularStylist(),
+                SizedBox(height: 20.h),
+                AboutHeader(
+                  text: "Popular Braids",
+                  onTap: () {},
+                  showSeeAll: true,
+                ),
+                SizedBox(height: 10.h),
+                PopularListBraids(),
               ],
             ),
           ),
