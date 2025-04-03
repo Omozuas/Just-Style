@@ -17,12 +17,7 @@ class HomeClientScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(
-              top: 15.h,
-              left: 15.w,
-              bottom: 15.h,
-              right: 15.w,
-            ),
+            padding: EdgeInsets.only(top: 15.h, left: 15.w, right: 15.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

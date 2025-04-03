@@ -21,12 +21,7 @@ class StylistClientScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(
-            top: 15.h,
-            left: 15.w,
-            bottom: 15.h,
-            right: 15.w,
-          ),
+          padding: EdgeInsets.only(top: 15.h, left: 15.w, right: 15.w),
           child: Column(
             children: [
               Row(
@@ -37,7 +32,7 @@ class StylistClientScreen extends StatelessWidget {
                   SearchButton(onTap: () {}),
                 ],
               ),
-              SizedBox(height: 15.h),
+              SizedBox(height: 5.h),
               Expanded(child: ListOfStylist()),
             ],
           ),
