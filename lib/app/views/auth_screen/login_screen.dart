@@ -4,9 +4,10 @@ import 'package:get/get.dart';
 import 'package:juststyle/app/common/app_style.dart';
 import 'package:juststyle/app/common/button_large.dart';
 import 'package:juststyle/app/common/custom_textfield.dart';
+import 'package:juststyle/app/views/bottom_nav/client/client_bottom_navigation.dart';
 import 'package:juststyle/app/theme/global_colors.dart';
-import 'package:juststyle/app/views/auth_screen/forgot_passord_screen.dart';
-import 'package:juststyle/app/views/auth_screen/signup_screen.dart';
+import 'forgot_passord_screen.dart';
+import 'signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -104,7 +105,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                   SizedBox(height: 50.h),
-                  ButtonLarge(onTap: () {}, text: 'Login'),
+                  ButtonLarge(
+                    onTap: () {
+                      Get.offAll(() => BaseClientScreen());
+                    },
+                    text: 'Login',
+                  ),
                   SizedBox(height: 20.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

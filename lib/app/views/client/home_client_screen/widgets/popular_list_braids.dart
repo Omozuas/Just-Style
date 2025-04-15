@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:juststyle/app/views/client/home_client_screen/widgets/popular_braids_card.dart';
+import 'popular_braids_card.dart';
 
 class PopularListBraids extends StatelessWidget {
-  const PopularListBraids({super.key});
-
+  const PopularListBraids({super.key, this.num = 0});
+  final int? num;
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -17,7 +17,7 @@ class PopularListBraids extends StatelessWidget {
         mainAxisSpacing: 12, // Vertical space between items
         childAspectRatio: 0.85, // Adjust the aspect ratio as needed
       ),
-      itemCount: 12,
+      itemCount: num != 0 ? num : 12,
       itemBuilder: (context, i) {
         return GestureDetector(
           onTap: () {},

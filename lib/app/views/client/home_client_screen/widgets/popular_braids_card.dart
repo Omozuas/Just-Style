@@ -28,6 +28,7 @@ class PopularBraidsCard extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
+                // ignore: deprecated_member_use
                 color: black.withOpacity(0.5), // Shadow color
                 blurRadius: 10, // Softness of the shadow
                 spreadRadius: 1, // How much the shadow spreads
