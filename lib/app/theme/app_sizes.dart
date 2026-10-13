@@ -1,4 +1,4 @@
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:juststyle/app/core/sizing/screen_size_extension.dart';
 
-double height = 825.h;
-double width = 375.w;
+double get height => 825.h;
+double get width => 375.w;
