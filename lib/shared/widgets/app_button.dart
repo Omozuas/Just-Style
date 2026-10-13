@@ -29,6 +29,8 @@ class AppButton extends StatelessWidget {
     this.fontSize = 16,
     this.isLoading = false,
     this.expand = true,
+    this.backgroundColor,
+    this.foregroundColor,
   });
 
   final String text;
@@ -43,13 +45,15 @@ class AppButton extends StatelessWidget {
   final double fontSize;
   final bool isLoading;
   final bool expand;
+  final Color? backgroundColor;
+  final Color? foregroundColor;
 
   @override
   Widget build(BuildContext context) {
     final bool isDisabled =
         variant == ButtonVariant.disabled || onPressed == null;
 
-    final Color backgroundColor = switch (variant) {
+    final Color resolvedBackground = backgroundColor ?? switch (variant) {
       ButtonVariant.primary => AppColors.black2,
       ButtonVariant.secondary => AppColors.white,
       ButtonVariant.transparent => Colors.transparent,
@@ -59,7 +63,7 @@ class AppButton extends StatelessWidget {
       ButtonVariant.navy => AppColors.black2,
     };
 
-    final Color textColor = switch (variant) {
+    final Color resolvedText = foregroundColor ?? switch (variant) {
       ButtonVariant.primary => AppColors.white,
       ButtonVariant.secondary => AppColors.black2,
       ButtonVariant.transparent => AppColors.black2,
@@ -86,7 +90,7 @@ class AppButton extends StatelessWidget {
           horizontal: horizontal,
         ),
         decoration: BoxDecoration(
-          color: isLoading ? AppColors.background : backgroundColor,
+          color: isLoading ? AppColors.background : resolvedBackground,
           borderRadius: borderRadiusAll(radius),
           border: borderColor == Colors.transparent
               ? null
@@ -117,7 +121,7 @@ class AppButton extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: AppTextStyle.labelLarge(
                             fontSize: fontSize,
-                            textColor: textColor,
+                            textColor: resolvedText,
                             strong: true,
                           ),
                         ),
@@ -127,7 +131,7 @@ class AppButton extends StatelessWidget {
                         text,
                         style: AppTextStyle.labelLarge(
                           fontSize: fontSize,
-                          textColor: textColor,
+                          textColor: resolvedText,
                           strong: true,
                         ),
                       ),

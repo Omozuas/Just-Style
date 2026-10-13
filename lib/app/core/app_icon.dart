@@ -22,6 +22,12 @@ abstract final class AppIcon {
   static const welcome2 = 'assets/image/welcome_braids.jpg';
   static const welcome3 = 'assets/image/welcome_fade.jpg';
   static const welcome4 = 'assets/image/welcome_braider.jpg';
+  static const homeAvatar = 'assets/image/home_avatar.jpg';
+  static const homeOffer = 'assets/image/home_offer.png';
+  static const homeStylistGrace = 'assets/image/home_stylist_grace.png';
+  static const homeBraidTopKnot = 'assets/image/home_braid_top_knot.png';
+  static const homeBraidCornrow = 'assets/image/home_braid_cornrow.png';
+  static const homeBraidLocs = 'assets/image/home_braid_locs.jpg';
 
   static const passwordSuccess =
       'assets/animations/Animation - 1721409960375.json';

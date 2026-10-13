@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:juststyle/app/core/sizing/screen_size_extension.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'package:juststyle/app/core/app_style.dart';
-import 'package:juststyle/app/theme/global_colors.dart';
+import 'package:juststyle/app/core/text/app_text.dart';
+import 'package:juststyle/app/theme/app_colors.dart';
+import 'package:juststyle/features/client/home/view/widgets/home_image.dart';
 
 class PopularStylistCard extends StatelessWidget {
   const PopularStylistCard({
@@ -11,40 +11,45 @@ class PopularStylistCard extends StatelessWidget {
     required this.stylistName,
     required this.profession,
   });
-  final String image, stylistName, profession;
+
+  final String image;
+  final String stylistName;
+  final String profession;
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 10.w, right: 10.w),
+    return SizedBox(
+      width: 84.w,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: 75.h,
-            width: 75.w,
+            height: 72.w,
+            width: 72.w,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: black,
               image: DecorationImage(
-                image: NetworkImage(image),
+                image: homeImage(image),
                 fit: BoxFit.cover,
               ),
             ),
           ),
+          gapH(8),
           Text(
             stylistName,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
-            softWrap: true,
-            style: appStyle(14, black, FontWeight.w500),
-          ),
-          Flexible(
-            child: Text(
-              profession,
-              textAlign: TextAlign.center,
-              maxLines: 2,
-              softWrap: true,
-              style: appStyle(12, HexColor("#878787"), FontWeight.w400),
+            style: AppTextStyle.paragraphMedium(
+              textColor: AppColors.black2,
+              strong: true,
             ),
+          ),
+          Text(
+            profession,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
+            style: AppTextStyle.paragraphSmall(textColor: AppColors.textMuted),
           ),
         ],
       ),

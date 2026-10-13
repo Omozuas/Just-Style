@@ -9,7 +9,7 @@ import 'package:juststyle/features/auth/sign_up/view/sign_up_password_screen.dar
 import 'package:juststyle/features/auth/sign_up/view/sign_up_profile_screen.dart';
 import 'package:juststyle/features/auth/verify_code/view/verify_code_screen.dart';
 import 'package:juststyle/features/client/bookings/view/booking_client_screen.dart';
-import 'package:juststyle/features/client/home/view/home_client_screen.dart';
+import 'package:juststyle/features/client/home/view/client_home_screen.dart';
 import 'package:juststyle/features/client/profile/view/profile_client_screen.dart';
 import 'package:juststyle/features/client/profile/view/sub_screens/account_info_screen.dart';
 import 'package:juststyle/features/client/profile/view/sub_screens/all_bookings_profile.dart';
@@ -39,7 +39,7 @@ final appRouter = GoRouter(
           routes: [
             GoRoute(
               path: AppRoutes.home,
-              builder: (context, state) => const HomeClientScreen(),
+              builder: (context, state) => const ClientHomeScreen(),
               routes: [
                 GoRoute(
                   path: 'stylist',

@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:juststyle/app/core/sizing/screen_size_extension.dart';
 import 'package:juststyle/app/router/app_navigation.dart';
-
-import 'package:juststyle/app/theme/app_sizes.dart';
 import 'package:juststyle/features/client/home/model/popular_stylist.dart';
+import 'package:juststyle/features/client/home/view/widgets/popular_stylist_card.dart';
 
-import 'popular_stylist_card.dart';
-
-class ListOfPopularStylist extends StatelessWidget {
-  const ListOfPopularStylist({super.key});
+class PopularStylistList extends StatelessWidget {
+  const PopularStylistList({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120.h,
-      width: width,
-      child: ListView(
-        shrinkWrap: true,
+      height: 136.h,
+      child: ListView.separated(
         scrollDirection: Axis.horizontal,
-        children: List.generate(7, (i) {
+        itemCount: 8,
+        separatorBuilder: (_, _) => gapW(8),
+        itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () => context.openStylistProfile(),
             child: PopularStylistCard(
@@ -27,7 +24,7 @@ class ListOfPopularStylist extends StatelessWidget {
               profession: graceStylist.profession,
             ),
           );
-        }),
+        },
       ),
     );
   }
